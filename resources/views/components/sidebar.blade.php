@@ -65,7 +65,7 @@
 			}
 
 			.united-service {
-				padding: 15px 30px;
+				padding: 15px 25px;
 			}
 
 			.setting {

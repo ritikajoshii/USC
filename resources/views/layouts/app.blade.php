@@ -23,10 +23,10 @@
 			crossorigin="anonymous">
 		<script src="{{ asset('https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js') }}"
 			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-			<!-- Scripts
-			-->
-			@vite(['resources/css/app.css', 'resources/js/app.js'])
-
+		
+		@vite(['resources/css/app.css', 'resources/js/app.js'])
+		
+		</script>
 
 
 
@@ -50,7 +50,7 @@
 
 			<!-- Page Content -->
 			<main>
-				<div style="margin-left: 250px;">
+				<div style="margin-left: 250px; margin-right:30px;">
 
 					{{ $slot }}
 				</div>

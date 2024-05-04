@@ -1,0 +1,137 @@
+#technician {
+    background-color: #8b0d35;
+}
+.main-data {
+    margin-top: 30px;
+    border: 1px solid #c2c2c2;
+    border-radius: 10px;
+    padding: 20px;
+}
+.Personal-Information {
+    background-color: none;
+    color: black;
+}
+.Personal-Information img {
+    padding-right: 5px;
+    height: 24px;
+    width: 24px;
+}
+.Personal-Information:hover {
+    color: black;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: black;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    border-radius: 0px;
+}
+.Professional-Information {
+    background-color: none;
+    color: black;
+}
+.Professional-Information:hover {
+    color: black;
+}
+.Professional-Information img {
+    padding-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+.Documents {
+    background-color: none;
+    color: black;
+}
+.Documents img {
+    padding-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+.Documents:hover {
+    color: black;
+}
+.Account-Access {
+    background-color: none;
+    color: black;
+}
+.Account-Access img {
+    padding-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+.Account-Access:hover {
+    color: black;
+}
+/* .nav-pills {
+    border-bottom: 1px solid lightgray;
+} */
+/* *************** Personal-Information******************** */
+.camera {
+    border: 1px solid #c2c2c2;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
+.camera img {
+    margin-left: 40px;
+    margin-top: 35px;
+}
+.input-box {
+    height: 56px;
+    margin-top: 15px;
+}
+input.form-control {
+    border: 1px solid lightgray !important;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+}
+input.form-control:focus {
+    border: none;
+}
+.input-group {
+    height: 56px;
+    margin-top: 15px;
+}
+.choose {
+    height: 56px;
+    border-radius: 10px;
+}
+.gender {
+    height: 56px;
+    border-radius: 10px;
+}
+.last-btn {
+    margin-top: 25px;
+    justify-content: end;
+    display: flex;
+    gap: 15px;
+}
+.last-btn .cancle {
+    border: 1px solid #a2a1a8;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.last-btn .cancle:hover {
+    background-color: #232f4b;
+    color: #fff;
+}
+.last-btn .next {
+    border: none;
+    background-color: #232f4b;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
+.choose:focus {
+    border-color: none;
+    box-shadow: none;
+}
