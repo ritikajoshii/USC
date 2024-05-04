@@ -386,7 +386,8 @@
 						<img src="{{ asset('assets/Images/🔽 Icon.svg') }}"><input id="searchInput" type="text" placeholder=" Search">
 					</div>
 					<div class="d-flex">
-						<button class="add-Technician"> <img src="{{ asset('assets/Images/add-circle.svg') }}">Add New Technician</button>
+						<a href="{{ route('add_technician') }}" style="text-decoration: none;"><button class="add-Technician"> <img
+									src="{{ asset('assets/Images/add-circle.svg') }}">Add New Technician</button></a>
 						<button class="filtter-butn" id="myBtn"><img src="{{ asset('assets/Images/Filter.svg') }}">Filtter</button>
 					</div>
 				</div>

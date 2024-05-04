@@ -12,6 +12,8 @@ Route::get('', function () {
 Route::get('/user_management', [HomeController::class, 'user_management'])->name('user_management');
 Route::get('/technician', [HomeController::class, 'technician'])->name('technician');
 Route::get('/add_technician', [HomeController::class, 'add_technician'])->name('add_technician');
+Route::get('/technician_profile', [HomeController::class, 'technician_profile'])->name('technician_profile');
+
 
 
 Route::get('/dashboard', function () {

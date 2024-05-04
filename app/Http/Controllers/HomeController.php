@@ -16,5 +16,9 @@ class HomeController extends Controller
     {
         return view('components.add_technician');
     }
+    public function technician_profile()
+    {
+        return view('components.technician_profile');
+    }
 
 }

@@ -9,11 +9,7 @@
 		<title>{{ config('app.name', 'Laravel') }}</title>
 
 		<!-- Fonts -->
-		<link href="{{ asset('CSS/style.css') }}" rel="stylesheet">
-		<link href="{{ asset('CSS/style.css') }}" rel="stylesheet">
-		<link href="{{ asset('CSS/bootstrap.css') }}" rel="stylesheet">
-		<link href="{{ asset('CSS/font-awesome.css') }}" rel="stylesheet">
-		<link href="{{ asset('CSS/usermanagment.css') }}" rel="stylesheet">
+
 		<link href="https://fonts.bunny.net" rel="preconnect">
 		<link href="{{ asset('https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap') }}" rel="stylesheet" />
 		<link href='{{ asset('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css') }}'
@@ -23,9 +19,7 @@
 			crossorigin="anonymous">
 		<script src="{{ asset('https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js') }}"
 			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-		
-		@vite(['resources/css/app.css', 'resources/js/app.js'])
-		
+			@vite(['resources/css/app.css', 'resources/js/app.js'])
 		</script>
 
 

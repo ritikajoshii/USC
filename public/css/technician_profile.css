@@ -1,0 +1,135 @@
+.main-section {
+    border: 1px solid lightgray;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.top-section {
+    border-bottom: 1px solid lightgray;
+}
+.profile-sec {
+    padding-bottom: 5px;
+    display: flex;
+    gap: 15px;
+}
+.ac-repair .this-ali-1 {
+    padding-top: 10px;
+    line-height: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #16151c;
+}
+.this-ali-2 img,
+.this-ali-3 img {
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+}
+.this-ali-2,
+.this-ali-3 {
+    font-size: 16px;
+    line-height: 0px;
+}
+.edit-btn {
+    background-color: #232f4b;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+.edit-btn img {
+    color: #fff;
+    padding-right: 5px;
+}
+
+/* tab-section */
+
+.tab-section .profile-detail {
+    display: block;
+}
+
+.change-tabs {
+    margin-top: 20px;
+    padding: 0px 0px;
+    border: 1px solid #a2a1a8;
+    border-radius: 10px;
+}
+.nav-pills1 .nav-link1.active,
+.nav-pills1 .show > .nav-link1 {
+    color: #ffff;
+    background-color: #232f4b;
+    border-radius: 10px;
+    font-weight: 600;
+    width: 100%;
+}
+.nav-pills1 .nav-link1 {
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: start;
+}
+.nav-pills1 .nav-link1 img.active,
+.nav-pills1 .show > .nav-link1 img {
+    color: #ffff;
+}
+
+/* Sidetab -section */
+.Personal-Information {
+    background-color: none;
+    color: black;
+}
+.Personal-Information img {
+    padding-right: 5px;
+    height: 24px;
+    width: 24px;
+}
+.Personal-Information:hover {
+    color: black;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #232f4b;
+    border-bottom: 2px solid #232f4b;
+    background-color: transparent;
+    border-radius: 0px;
+    font-weight: 600;
+}
+.Professional-Information {
+    background-color: none;
+    color: black;
+}
+.Professional-Information:hover {
+    color: black;
+}
+.Professional-Information img {
+    padding-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+.Documents {
+    background-color: none;
+    color: black;
+}
+.Documents img {
+    padding-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+.Documents:hover {
+    color: black;
+}
+.Account-Access {
+    background-color: none;
+    color: black;
+}
+.Account-Access img {
+    padding-right: 8px;
+    height: 24px;
+    width: 24px;
+}
+.Account-Access:hover {
+    color: black;
+}
