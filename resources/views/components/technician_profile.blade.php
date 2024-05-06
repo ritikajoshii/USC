@@ -6,7 +6,11 @@
 	</script>
 	<link href="{{ asset('css/technician_profile.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+	<style>
+		.fade:not(.show) {
+			display: none;
+		}
+	</style>
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
 			<div class="container-fluid nav-baar">
@@ -54,148 +58,150 @@
 			<div class="col-lg-3 col-md-3 change-tabs">
 				<ul class="nav nav-pills1 profile-detail mb-3" id="main-pills-tab" role="tablist">
 					<li class="nav-item" role="presentation">
-						<button class="nav-link1 active" id="main-pills-home-tab" data-bs-toggle="pill" data-bs-target="#main-pills-home"
-							type="button" role="tab" aria-controls="main-pills-home" aria-selected="true">
+						<button class="nav-link1 active" id="main-pills-home-tab" data-bs-toggle="pill" data-bs-target="#main-pills-home1"
+							type="button" role="tab" aria-controls="main-pills-home1" aria-selected="true">
 							<img src="{{ asset('assets/Images/profile-user.svg') }}">Profile
 						</button>
 					</li>
 					<li class="nav-item" role="presentation">
-						<button class="nav-link1" id="main-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#main-pills-profile"
-							type="button" role="tab" aria-controls="main-pills-profile" aria-selected="false">
+						<button class="nav-link1" id="main-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#main-pills-profile1"
+							type="button" role="tab" aria-controls="main-pills-profile1" aria-selected="false">
 							<img src="assets/Images/service.svg">Service
 						</button>
 					</li>
 					<li class="nav-item" role="presentation">
-						<button class="nav-link1" id="main-pills-contact-tab" data-bs-toggle="pill" data-bs-target="#main-pills-contact"
-							type="button" role="tab" aria-controls="main-pills-contact" aria-selected="false">
+						<button class="nav-link1" id="main-pills-contact-tab" data-bs-toggle="pill" data-bs-target="#main-pills-contact1"
+							type="button" role="tab" aria-controls="main-pills-contact1" aria-selected="false">
 							<img src="{{ asset('assets/Images/leave.svg') }}">Leave
 						</button>
 					</li>
 				</ul>
 			</div>
 			<div class="col-lg-9 col-md-9">
-				<div class="tab-content" id="main-pills-tabContent">
-					<div class="tab-pane fade show active" id="main-pills-home" role="tabpanel" aria-labelledby="main-pills-home-tab"
-						tabindex="0">
-						<ul class="nav nav-pills mb-3" id="sub-pills-tab" role="tablist">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link active Personal-Information" id="sub-pills-home-tab" data-bs-toggle="pill"
-									data-bs-target="#sub-pills-home" type="button" role="tab" aria-controls="sub-pills-home"
-									aria-selected="true">
-									<img src="{{ asset('assets\\Images\\user.svg') }}">Personal Information
-								</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link Professional-Information" id="sub-pills-profile-tab" data-bs-toggle="pill"
-									data-bs-target="#sub-pills-profile" type="button" role="tab" aria-controls="sub-pills -profile"
-									aria-selected="false">
-									<img src="{{ asset('assets/Images/briefcase 04.svg') }}">Professional Information
-								</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link Documents" id="sub-pills-contact-tab" data-bs-toggle="pill"
-									data-bs-target="#sub-pills-contact" type="button" role="tab" aria-controls="sub-pills-contact"
-									aria-selected="false">
-									<img src="{{ asset('/assets/Images/document-text.svg') }}">Documents
-								</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link Account-Access" id="sub-pills-contact-tab1" data-bs-toggle="pill"
-									data-bs-target="#sub-pills-account-access" type="button" role="tab"
-									aria-controls="sub-pills-account-access" aria-selected="false">
-									<img src="{{ asset('/assets/Images/lock.svg') }}">Account Access
-								</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="tab-content" id="sub-pills-tabContent">
-					{{-- first tab --}}
-					<div class="tab-pane fade show active Personal-Information" id="sub-pills-home" role="tabpanel"
-						aria-labelledby="sub-pills-home-tab" tabindex="0">
-						<div class="row">
-							<div class="col same-box">
-								<label>First Name</label>
-								<p>Brooklyn</p>
-								{{-- <input class="form-control fill-details" type="text" aria-label="First name" placeholder=""> --}}
-							</div>
-							<div class="col same-box">
-								<label>Last Name</label>
-								<p>Simmons</p>
-								{{-- <input class="form-control fill-details" type="text" aria-label="Last name" placeholder=""> --}}
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col same-box">
-								<label>Mobile Number</label>
-								<p>(702) 555-0122</p>
-								{{-- <input class="form-control fill-details" type="number" aria-label="First name" placeholder=""> --}}
-
-							</div>
-							<div class="col same-box">
-								<label>Email Address</label>
-								<p>this@gmail.com</p>
-								{{-- <input class="form-control fill-details" type="email" aria-label="Last name" placeholder=""> --}}
-							</div>
-						</div>
-						<div class="row">
-							<div class="col same-box">
-								<label>Date of Birth</label>
-								<p>July 14, 1995</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-							<div class="col same-box">
-								<label>Date of Birth</label>
-								<p>Married</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-
-						</div>
-						<div class="row">
-							<div class="col same-box">
-								<label>Gender</label>
-								<p>Female</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-							<div class="col same-box">
-								<label>Nationality</label>
-								<p>America</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-
-						</div>
-						<div class="row">
-							<div class="col same-box">
-								<label>Address</label>
-								<p>2464 Royal Ln. Mesa, New Jersey</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-							<div class="col same-box">
-								<label>City</label>
-								<p>California</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-
-						</div>
-						<div class="row">
-							<div class="col same-box">
-								<label>State</label>
-								<p>United State</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-							<div class="col same-box">
-								<label>Zip Code</label>
-								<p>35624</p>
-								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-							</div>
-
+				<div class="tab-pane fade show active" id="main-pills-home1" role="tabpanel" aria-labelledby="main-pills-home-tab"
+					tabindex="0">
+					<div>
+						<div>
+							<ul class="nav nav-pills mb-3" id="sub-pills-tab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active Personal-Information" id="sub-pills-home-tab" data-bs-toggle="pill"
+										data-bs-target="#sub-pills-home" type="button" role="tab" aria-controls="sub-pills-home"
+										aria-selected="true">
+										<img src="{{ asset('assets\\Images\\user.svg') }}">Personal Information
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link Professional-Information" id="sub-pills-profile-tab" data-bs-toggle="pill"
+										data-bs-target="#sub-pills-profile" type="button" role="tab" aria-controls="sub-pills-profile"
+										aria-selected="false">
+										<img src="{{ asset('assets/Images/briefcase 04.svg') }}">Professional Information
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link Documents" id="sub-pills-contact-tab" data-bs-toggle="pill"
+										data-bs-target="#sub-pills-contact" type="button" role="tab" aria-controls="sub-pills-contact"
+										aria-selected="false">
+										<img src="{{ asset('/assets/Images/document-text.svg') }}">Documents
+									</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link Account-Access" id="sub-pills-contact-tab1" data-bs-toggle="pill"
+										data-bs-target="#sub-pills-account-access" type="button" role="tab"
+										aria-controls="sub-pills-account-access" aria-selected="false">
+										<img src="{{ asset('/assets/Images/lock.svg') }}">Account Access
+									</button>
+								</li>
+							</ul>
 						</div>
 					</div>
-					{{-- --------------------------------------------Second-tab---------------------------- --}}
+					<div class="tab-content" id="sub-pills-tabContent">
+						{{-- Personal Information --}}
+						<div class="tab-pane fade show active Personal-Information" id="sub-pills-home" role="tabpanel"
+							aria-labelledby="sub-pills-home-tab" tabindex="0">
+							<div class="row">
+								<div class="col same-box">
+									<label>First Name</label>
+									<p>Brooklyn</p>
+									{{-- <input class="form-control fill-details" type="text" aria-label="First name" placeholder=""> --}}
+								</div>
+								<div class="col same-box">
+									<label>Last Name</label>
+									<p>Simmons</p>
+									{{-- <input class="form-control fill-details" type="text" aria-label="Last name" placeholder=""> --}}
+								</div>
+							</div>
+							<div class="row">
+								<div class="col same-box">
+									<label>Mobile Number</label>
+									<p>(702) 555-0122</p>
+									{{-- <input class="form-control fill-details" type="number" aria-label="First name" placeholder=""> --}}
+
+								</div>
+								<div class="col same-box">
+									<label>Email Address</label>
+									<p>this@gmail.com</p>
+									{{-- <input class="form-control fill-details" type="email" aria-label="Last name" placeholder=""> --}}
+								</div>
+							</div>
+							<div class="row">
+								<div class="col same-box">
+									<label>Date of Birth</label>
+									<p>July 14, 1995</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+								<div class="col same-box">
+									<label>Date of Birth</label>
+									<p>Married</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+							</div>
+							<div class="row">
+								<div class="col same-box">
+									<label>Gender</label>
+									<p>Female</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+								<div class="col same-box">
+									<label>Nationality</label>
+									<p>America</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col same-box">
+									<label>Address</label>
+									<p>2464 Royal Ln. Mesa, New Jersey</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+								<div class="col same-box">
+									<label>City</label>
+									<p>California</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col same-box">
+									<label>State</label>
+									<p>United State</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+								<div class="col same-box">
+									<label>Zip Code</label>
+									<p>35624</p>
+									{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					{{-- Professional Information --}}
+
 					<div class="tab-pane fade Professional-Information" id="sub-pills-profile" role="tabpanel"
 						aria-labelledby="sub-pills-profile-tab" tabindex="0">
-
 						<div class="row">
 							<div class="col same-box">
 								<label>Employee Type</label>
@@ -210,6 +216,7 @@
 
 						</div>
 
+
 						<div class="row">
 							<div class="col same-box">
 								<label>Department</label>
@@ -223,6 +230,7 @@
 							</div>
 
 						</div>
+
 						<div class="row">
 							<div class="col same-box">
 								<label>Working Days</label>
@@ -236,6 +244,7 @@
 							</div>
 
 						</div>
+
 						<div class="row">
 							<div class="col-6 same-box">
 								<label>Office Location</label>
@@ -243,27 +252,28 @@
 								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
 							</div>
 						</div>
-
+					</div>
+					{{-- Documents --}}
+					<div class="tab-pane fade Documents" id="sub-pills-contact" role="tabpanel"
+						aria-labelledby="sub-pills-contact-tab" tabindex="0">
 
 
 					</div>
-				</div>
-				<div class="tab-pane fade Documents" id="sub-pills-contact" role="tabpanel"
-					aria-labelledby="sub-pills-contact-tab" tabindex="0">...</div>
-				{{-- ---------------------------------account-------------------------- --}}
 
-				<div class="tab-pane fade Account-Access" id="sub-pills-account-access" role="tabpanel"
-					aria-labelledby="sub-pills-contact-tab1" tabindex="0">
-					<div class="row">
-						<div class="col same-box">
-							<label>Email Address</label>
-							<p>this@gmail.com</p>
-							{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-						</div>
-						<div class="col same-box">
-							<label>Expense ID</label>
-							<p>EXP 01</p>
-							{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+					{{-- Account Access --}}
+					<div class="tab-pane fade Account-Access" id="sub-pills-account-access" role="tabpanel"
+						aria-labelledby="sub-pills-contact-tab1" tabindex="0">
+						<div class="row">
+							<div class="col same-box">
+								<label>Email Address</label>
+								<p>this@gmail.com</p>
+								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+							</div>
+							<div class="col same-box">
+								<label>Expense ID</label>
+								<p>EXP 01</p>
+								{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
+							</div>
 						</div>
 						<div class="row">
 							<div class="col same-box">
@@ -279,48 +289,26 @@
 
 						</div>
 					</div>
+
+
+					{{-- ----------------------- Services------------ --}}
+					<div class="tab-pane fade" id="main-pills-profile1" role="tabpanel" aria-labelledby="main-pills-profile-tab"
+						tabindex="0">
+						<h2>Service</h2>
+						<p>This is the content for the Service tab.</p>
+					</div>
+
+
+					{{-- ---------------------------------- leave----------------------------- --}}
+					<div class="tab-pane fade" id="main-pills-contact1" role="tabpanel" aria-labelledby="main-pills-contact-tab"
+						tabindex="0">
+						<!-- Content for the Leave tab -->
+						<h2>Leave</h2>
+						<p>This is the content for the Leave tab.</p>
+						<!-- Add your desired content for the Leave tab here -->
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="tab-pane fade" id="main-pills-profile-tab" role="tabpanel" aria-labelledby="pills-profile-tab"
-			tabindex="0">
-			...
-		</div>
-		{{-- ----------------------------------------------------------- --}}
-		<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-			<div class="row">
-				<div class="col same-box">
-					<label>Email Address</label>
-					<p>this@gmail.com</p>
-					{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-				</div>
-				<div class="col same-box">
-					<label>Expense ID</label>
-					<p>EXP 01</p>
-					{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-				</div>
-
-			</div>
-
-		</div>
-		<div class="row">
-			<div class="col same-box">
-				<label>Vehicle ID</label>
-				<p>BR 01</p>
-				{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-			</div>
-			<div class="col same-box">
-				<label>Other ID</label>
-				<p>OTH 01</p>
-				{{-- <input class="form-control fill-details" type="date" aria-label="First name" placeholder=""> --}}
-			</div>
-
-		</div>
-
-	</div>
-	</div>
-
-	</div>
-	</div>
 </x-app-layout>
