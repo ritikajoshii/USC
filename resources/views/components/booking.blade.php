@@ -1,22 +1,100 @@
 <x-app-layout>
 	<link type="text/css" href="{{ asset('https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css') }}"
 		rel="stylesheet">
-	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+
 
 	<style>
+		body {
+			background-color: rgb(219 202 202 / 20%);
+		}
+
+		.content {
+			background-color: transparent;
+			padding: 20px 0px;
+			z-index: 999;
+			/* position: fixed; */
+			/* border-bottom: 1px solid gray; */
+		}
+
+		.date {
+			line-height: 0;
+			color: #A3A3A3;
+			font-size: 14px;
+		}
+
+		.nav-baar {
+			justify-content: space-between;
+			display: flex;
+		}
+
+		.navbar-brand {
+			color: #525256;
+			font-size: 20px;
+			font-weight: 500;
+			padding-bottom: 0px;
+		}
+
+		.search_box {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.bi-bell {
+			height: 24px;
+			width: 24px;
+			padding-right: 20px;
+			margin-top: 15px;
+			color: #525256;
+		}
+
+		.input-search {
+			display: flex;
+			justify-content: space-between;
+			background-color: #ffff;
+			height: 48px;
+			padding: 10px 20px;
+			align-items: center;
+			border-radius: 12px;
+			box-shadow: 0 2.7px 27.03px 0 rgba(69, 69, 80, 0.1);
+		}
+
+		input .form_input {
+			border-radius: 12px;
+			overflow: hidden;
+			height: 100%;
+			width: 100%;
+			outline: none;
+			border: none;
+		}
+
+		.input-search input::placeholder {
+			color: rgba(163, 163, 163, 1);
+		}
+
+		.input-search input {
+			border: none;
+			outline: 0;
+		}
+
+
+		.bi-search {
+			margin-top: 10px;
+		}
+
 		/* ********************************************* */
 		.main-data {
 			position: relative;
-			/* clear: both; */
-			/* width: 100%; */
-
+			clear: both;
+			width: 100%;
 			margin-top: 30px;
-			border: 1px solid #A2A1A8;
+			border: 1px solid rgba(162, 161, 168, 0.2);
 			border-radius: 10px;
-			padding: 10px;
+			padding: 20px;
 		}
 
-		div#example_filter {
+		div #example_filter {
 			text-align: start;
 			float: left;
 		}
@@ -49,14 +127,12 @@
 		}
 
 		.button-top {
-			padding: 30px;
-			/* padding-right: 30px; */
+			padding: 0px 0px 30px 0px;
 			justify-content: space-between;
 			display: flex;
-			/* justify-content: space-evenly; */
 		}
 
-		.button-top .add-Technician {
+		.button-top .add-user {
 			display: flex;
 			border: none;
 			align-items: center;
@@ -67,14 +143,15 @@
 			border-radius: 10px;
 		}
 
-		.button-top .add-Technician img {
+		.button-top .add-user img {
 			padding-right: 5px;
 		}
 
 		.filtter-butn {
 			align-items: center;
 			display: flex;
-			border: 1px solid #A2A1A8;
+			background: transparent;
+			border: 1px solid rgba(162, 161, 168, 0.2);
 			border-radius: 10px;
 			padding: 0px 22px;
 		}
@@ -83,7 +160,7 @@
 			padding-right: 10px;
 		}
 
-		div#example_info {
+		div #example_info {
 			margin-left: 35%;
 			display: flex;
 			justify-content: center;
@@ -93,12 +170,13 @@
 
 		table.dataTable.no-footer {
 			border-bottom: 1px solid lightgray;
+			white-space: nowrap;
 		}
 
-		.On-Service {
+		.active {
 			text-align: center;
-			background-color: #d6e2f4;
-			color: #006AFF;
+			background-color: #bae7d4d1;
+			color: #3FC28A;
 			font-size: 12px;
 			border-radius: 4px;
 			padding: 2px 8px;
@@ -117,12 +195,11 @@
 			width: fit-content;
 		}
 
-		.Idle {
+		.new-user {
 			padding: 2px 8px;
 			width: fit-content;
 			text-align: center;
-			color: #656575;
-			background-color: #dfdfe9;
+			background-color: #cbc3ef;
 			font-size: 12px;
 			border-radius: 4px;
 		}
@@ -159,7 +236,7 @@
 			margin-top: 10%;
 			padding: 20px;
 			border: 1px solid #888;
-			width: 25%;
+			width: 30%;
 		}
 
 		/* The Close Button */
@@ -187,7 +264,6 @@
 			height: 24px;
 			width: 24px;
 			text-align: center;
-
 
 		}
 
@@ -241,9 +317,9 @@
 
 		.search-table {
 			display: flex;
-			width: 300px;
+			width: 343px;
 			border: 1px solid lightgray;
-			border-radius: 5px;
+			border-radius: 10px;
 			height: 50px;
 		}
 
@@ -254,6 +330,7 @@
 			width: 100%;
 			height: 100%;
 			background-color: transparent;
+			padding: 10px;
 		}
 
 		.search-table img {
@@ -264,7 +341,9 @@
 			text-align: center;
 		}
 
-
+		#booking {
+			background-color: #8B0D35;
+		}
 
 		.this-all {
 			display: flex;
@@ -276,13 +355,41 @@
 		.this-all img {
 			padding-right: 8px;
 		}
+
+		.list tr td a {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		.list tr td p {
+			margin-bottom: 0px;
+		}
+
+		.dataTables_wrapper {
+			overflow: auto;
+		}
+
+		.search-table input::placeholder {
+			color: rgba(22, 21, 28, 0.2);
+		}
+
+		@media screen and (max-width: 850px) {
+			.search-table {
+				width: 100%;
+				margin-right: 10px;
+			}
+		}
+
+		.dataTables_wrapper .dataTables_info {
+			color: #A2A1A8;
+		}
 	</style>
 
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
-			<div class="container-fluid nav-baar">
+			<div class="container-fluid nav-baar px-0">
 				<div>
-					<p class="navbar-brand">Todays Statistics</p>
+					<p class="navbar-brand">Bookings</p>
 					<p class="date">Tue, 14 Nov, 2024, 11.30 AM </p>
 				</div>
 
@@ -301,81 +408,73 @@
 								stroke="#656575" stroke-width="1.80206" stroke-linecap="round" />
 						</svg>
 					</div>
-
 				</div>
 			</div>
 		</nav>
 	</header>
 
 	<div class="main-data">
-		<table class="display" id="example" style="width:100%">
+		<table class="display" id="example1" style="width:100%">
 
 			<thead class="heading">
 				<div class="button-top">
 					<div class="search-table">
-						<img src="{{ asset('assets/Images/🔽 Icon.svg') }}"><input id="searchInput" type="text" placeholder=" Search">
+						<img src="{{ asset('assets/Images/🔽 Icon.svg') }}"><input id="searchInput1" type="text" placeholder="Search">
 					</div>
 					<div class="d-flex">
-						<a href="{{ route('add_technician') }}" style="text-decoration: none;"><button class="add-Technician"> <img
-									src="{{ asset('assets/Images/add-circle.svg') }}">Add New Technician</button></a>
-						<button class="filtter-butn" id="myBtn"><img src="{{ asset('assets/Images/Filter.svg') }}">Filtter</button>
+						<button class="filtter-butn" id="myBtn"><img src="{{ asset('assets/Images/Filter.svg') }}">Filter</button>
 					</div>
 				</div>
+
 				<tr>
-					<th>Technician Name</th>
-					<th>Mobile Number</th>
-					<th>Email</th>
+					<th>Service Id</th>
+					<th>User Name</th>
+					<th>Service</th>
 					<th>Location</th>
+					<th>Technician</th>
 					<th>Total Order</th>
 					<th>Status</th>
 					<th>Action</th>
 				</tr>
 			</thead>
-			<tbody class="list" id="tableBody">
-
+			<tbody class="list" id="searchResult">
 				<tr>
-
-
-					<td class="d-flex this-all"><a href="{{ route('technician_profile') }}"
-							style="cursor: pointer; text-decoration:none; color:black;"><img
-								src="{{ asset('assets/Images/Ellipse 1192.svg') }}">Tech
-							Ali</a></td>
-
-					<td>345321231</td>
-					<td>this@gmail.com</td>
+					<td>SV 001</td>
+					<td>This Ali</td>
+					<td>Electronics Service</td>
 					<td>Doha</td>
+					<td>That Ali</td>
 					<td>10</td>
 					<td>
-						<p class="Idle">Idle</p>
+						<p class="new-user">New User</p>
 					</td>
-					<td><button class="view-edit-btn"><img src="{{ asset('assets/Images/view.svg') }}">
-							<img src="{{ asset('assets/Images/edit.svg') }}">
-							<img src="{{ asset('assets/Images/trash 01.svg') }}">
-						</button></td>
-
+					<td><a href="">View Details</a></td>
+				</tr>
+				<tr>
+					<td>SV 002</td>
+					<td class="d-flex this-all">This Ali</td>
+					<td>Electronics Service</td>
+					<td>Doha</td>
+					<td>That Ali</td>
+					<td>10</td>
+					<td>
+						<p class="active">Active User</p>
+					</td>
+					<td><a href="">View Details</a></td>
 				</tr>
 
 				<tr>
-					<td class="d-flex this-all"><img src="{{ asset('assets/Images/Ellipse 1192.svg') }}">Tech Ali</td>
-					<td>345321231</td>
-					<td>this@gmail.com</td>
+					<td>SV 003</td>
+					<td class="d-flex this-all">This Ali</td>
+					<td>Electronics Service</td>
 					<td>Doha</td>
+					<td>That Ali</td>
 					<td>10</td>
 					<td>
-						<p class="On-Service">On Service</p>
+						<p class="inactive">Inactive User</p>
 					</td>
-					<td><button class="view-edit-btn"><img src="{{ asset('assets/Images/view.svg') }}">
-							<img src="{{ asset('assets/Images/edit.svg') }}">
-							<img src="{{ asset('assets/Images/trash 01.svg') }}">
-						</button></td>
+					<td><a href="">View Details</a></td>
 				</tr>
-
-
-
-
-
-
-
 
 
 			</tbody>
@@ -396,18 +495,21 @@
 						<div class="d-flex radio">
 							<div class="form-check form-check-inline">
 								<input class="form-check-input" id="inlineCheckbox1" type="checkbox" value="option1">
-								<label class="form-check-label" for="inlineCheckbox1" style="font-size:13px;">Idle</label>
+								<label class="form-check-label" for="inlineCheckbox1" style="font-size:13px;">New User</label>
 							</div>
 							<div class="form-check form-check-inline">
 								<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
-								<label class="form-check-label" for="inlineCheckbox2" style="font-size:13px;">On Service</label>
+								<label class="form-check-label" for="inlineCheckbox2" style="font-size:13px;">Active User</label>
 							</div>
-
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" id="inlineCheckbox2" type="checkbox" value="option2">
+								<label class="form-check-label" for="inlineCheckbox2" style="font-size:13px;">Inactive User</label>
+							</div>
 						</div>
 
 
 						<div class="d-flex aply-cancle" style="justify-content: end; gap:10px;">
-							<button class="close" id="cencle">Cencel</button>
+							<button class="close" id="cencle">Cancel</button>
 							<button class="close1" id="Apply">Apply</button>
 						</div>
 					</div>
@@ -425,14 +527,15 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 	<script>
 		$(document).ready(function() {
-			$('#example').DataTable({
+			$('#example1').DataTable({
 				paging: true, // Enable paging
 				pagingType: 'simple_numbers', // Display simple numeric pagination
 				lengthChange: false, // Disable the "Show [x] entries" dropdown
 				searching: false, // Enable search functionality
 				ordering: true, // Enable ordering
 				info: true, // Enable info (page [x] of [y])
-				responsive: true // Enable responsive mode
+				responsive: true, // Enable responsive mode
+
 			});
 		});
 	</script>
@@ -469,11 +572,11 @@
 	{{-- Search  --}}
 
 	<script>
-		const searchInput = document.getElementById('searchInput');
-		const tableBody = document.getElementById('tableBody');
-		const rows = tableBody.getElementsByTagName('tr');
+		const searchInput1 = document.getElementById('searchInput1');
+		const searchResult = document.getElementById('searchResult');
+		const rows = searchResult.getElementsByTagName('tr');
 
-		searchInput.addEventListener('input', function() {
+		searchInput1.addEventListener('input', function() {
 			const searchText = this.value.toLowerCase();
 
 			for (let i = 0; i < rows.length; i++) {

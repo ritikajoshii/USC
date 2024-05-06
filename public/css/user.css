@@ -1,0 +1,270 @@
+body {
+    background-color: rgb(219 202 202 / 20%);
+}
+
+/* ********************************************* */
+.main-data {
+    position: relative;
+    clear: both;
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid #a2a1a8;
+    border-radius: 10px;
+    padding: 10px;
+}
+table.dataTable.no-footer {
+    white-space: nowrap;
+}
+.dataTables_wrapper {
+    overflow: auto;
+}
+div#example_filter {
+    text-align: start;
+    float: left;
+}
+
+.view-edit-btn {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    gap: 10px;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent !important;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    color: #a2a1a8;
+    font-weight: 300;
+    padding: 10px 18px;
+    border-bottom: 1px solid lightgray;
+}
+
+table.dataTable.display tbody tr.even > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+    background-color: none !important;
+}
+
+.button-top {
+    padding: 30px;
+    /* padding-right: 30px; */
+    justify-content: space-between;
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.button-top .add-user {
+    display: flex;
+    border: none;
+    align-items: center;
+    margin-right: 50px;
+    background-color: #232f4b;
+    color: #ffff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.button-top .add-user img {
+    padding-right: 5px;
+}
+
+.filtter-butn {
+    align-items: center;
+    display: flex;
+    border: 1px solid #a2a1a8;
+    border-radius: 10px;
+    padding: 0px 22px;
+}
+
+.filtter-butn img {
+    padding-right: 10px;
+}
+
+div#example_info {
+    margin-left: 35%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid lightgray;
+}
+
+.active {
+    text-align: center;
+    background-color: #bae7d4d1;
+    color: #3fc28a;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 2px 8px;
+    width: fit-content;
+}
+
+.inactive {
+    font-size: 12px;
+    color: #8b0d35;
+    background-color: #ffc9da93;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px 8px;
+    width: fit-content;
+}
+
+.new-user {
+    padding: 2px 8px;
+    width: fit-content;
+    text-align: center;
+    background-color: #cbc3ef;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+/* model box */
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin-left: 40%;
+    margin-top: 10%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+/* The Close Button */
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.search-employe {
+    display: flex;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.search-employe img {
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+}
+
+.search-employe input {
+    border: none;
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.select-type {
+    padding-top: 13px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #16151c;
+}
+
+.form-check-input:checked {
+    color: black;
+    background-color: #000;
+    border-color: #000;
+    outline: none;
+}
+
+.aply-cancle button {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button#Apply {
+    background-color: #232f4b;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+button#cencle {
+    background-color: transparent;
+    border: 1px solid #a2a1a8;
+    padding: 10px 30px;
+    color: black;
+    border-radius: 10px;
+}
+
+button#cencle:hover {
+    background-color: #232f4b;
+    color: #fff;
+}
+
+.search-table {
+    display: flex;
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.search-table input {
+    border: none;
+    overflow: hidden !important;
+    outline: none !important;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.search-table img {
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+}
+
+#user {
+    background-color: #8b0d35;
+}
+
+.this-all {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.this-all img {
+    padding-right: 8px;
+}

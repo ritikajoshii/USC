@@ -20,5 +20,9 @@ class HomeController extends Controller
     {
         return view('components.technician_profile');
     }
+    public function booking()
+    {
+        return view('components.booking');
+    }
 
 }

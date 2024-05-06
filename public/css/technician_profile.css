@@ -170,3 +170,77 @@
     padding: 5px 10px;
     border-bottom: 1px solid lightgray;
 }
+.view-image input {
+    border: none;
+    background-color: transparent;
+}
+.view-image {
+    display: flex;
+    height: 50px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.document-sec {
+    padding: 10px 20px;
+    gap: 20px;
+}
+.document-sec img {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+table {
+    background-color: #a2a1a8 !important;
+    margin-top: 20px;
+    padding: 2px 6px;
+}
+table .Completed {
+    color: #3fc28a;
+    background-color: #d0f2e463;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: fit-content;
+}
+table .process {
+    color: #efbe12;
+    background-color: #faf3da;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: fit-content;
+}
+/* ************leave section********** */
+.Pending {
+    color: #efbe12;
+    background-color: #faf3da;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: fit-content;
+}
+.Approved {
+    color: #3fc28a;
+    background-color: #d0f2e463;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: fit-content;
+}
+.Reject {
+    color: #f45b69;
+    border-radius: 2px;
+    background-color: #f7dfe1;
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: fit-content;
+}
+.box-table tr td,
+.box-table tr th {
+    background-color: #f7f4f4;
+}

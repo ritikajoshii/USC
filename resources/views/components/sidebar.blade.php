@@ -82,7 +82,7 @@
 			<a id="dashboard" href="{{ route('dashboard') }}">Dashboard</a>
 			<a id="user" href="{{ route('user_management') }}">User</a>
 			<a id="technician" href="{{ route('technician') }}">Technician</a>
-			<a href="#about">Bookings</a>
+			<a id="booking" href="{{ route('booking') }}">Bookings</a>
 			<a href="#about">Notifications</a>
 			<a class="setting" href="#about">Settings</a>
 			<a href="#about">Report</a>

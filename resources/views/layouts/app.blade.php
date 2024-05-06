@@ -44,7 +44,7 @@
 
 			<!-- Page Content -->
 			<main>
-				<div style="margin-left: 250px; margin-right:30px;">
+				<div style="margin-left: 265px; margin-right:30px;">
 
 					{{ $slot }}
 				</div>

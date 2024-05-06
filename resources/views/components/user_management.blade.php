@@ -1,379 +1,38 @@
 <x-app-layout>
 	<link type="text/css" href="{{ asset('https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css') }}"
 		rel="stylesheet">
+		<link href="{{ asset('css/user.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 
 
 	<style>
-		body {
-			background-color: rgb(219 202 202 / 20%);
-		}
-
-		.content {
-			background-color: transparent;
-
-			padding: 15px 16px;
-			z-index: 999px;
-			/* position: fixed; */
-			border-bottom: 1px solid gray;
-		}
-
-		.date {
-			line-height: 0;
-			color: #A3A3A3;
-			font-size: 14px;
-		}
-
-		.nav-baar {
-			justify-content: space-between;
-			display: flex;
-		}
-
-		.navbar-brand {
-			color: #525256;
-			font-size: 20px;
-			font-weight: 500;
-		}
-
-		.search {
-			display: flex;
-		}
-
-		.bi-bell {
-			height: 24px;
-			width: 24px;
-			padding-right: 20px;
-			margin-top: 15px;
-			color: #525256;
-		}
-
-		.input-search {
-			display: flex;
-			justify-content: space-between;
-			background-color: #ffff;
-			padding-right: 30px;
-			height: 38px;
-			margin-top: 10px;
-			border-radius: 15px;
-
-		}
-
-		input.form-control {
-			border-radius: 15px;
-			overflow: hidden;
-			height: 100%;
-			width: 100%;
-			outline: none;
-			border: none;
-			padding-left: 20px
-		}
-
-		/* input.form-control::placeholder {
-				padding-left: 10px;
-			} */
-
-		.bi-search {
-			margin-top: 10px;
-		}
-
-		/* ********************************************* */
-		.main-data {
-			position: relative;
-			/* clear: both; */
-			/* width: 100%; */
-
-			margin-top: 30px;
-			border: 1px solid #A2A1A8;
-			border-radius: 10px;
-			padding: 10px;
-		}
-
-		div#example_filter {
-			text-align: start;
-			float: left;
-		}
-
-
-
-		.view-edit-btn {
-			display: flex;
-			border: none;
-			background-color: transparent;
-			gap: 10px;
-
-		}
-
-		table.dataTable tbody tr {
-			background-color: transparent !important;
-		}
-
-		table.dataTable thead th,
-		table.dataTable thead td {
-			color: #A2A1A8;
-			font-weight: 300;
-			padding: 10px 18px;
-			border-bottom: 1px solid lightgray;
-		}
-
-		table.dataTable.display tbody tr.even>.sorting_1,
-		table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
-			background-color: none !important;
-		}
-
-		.button-top {
-			padding: 30px;
-			/* padding-right: 30px; */
-			justify-content: space-between;
-			display: flex;
-			/* justify-content: space-evenly; */
-		}
-
-		.button-top .add-user {
-			display: flex;
-			border: none;
-			align-items: center;
-			margin-right: 50px;
-			background-color: #232F4B;
-			color: #ffff;
-			padding: 10px 30px;
-			border-radius: 10px;
-		}
-
-		.button-top .add-user img {
-			padding-right: 5px;
-		}
-
-		.filtter-butn {
-			align-items: center;
-			display: flex;
-			border: 1px solid #A2A1A8;
-			border-radius: 10px;
-			padding: 0px 22px;
-		}
-
-		.filtter-butn img {
-			padding-right: 10px;
-		}
-
-		div#example_info {
-			margin-left: 35%;
-			display: flex;
-			justify-content: center;
-			text-align: center;
-
-		}
-
-		table.dataTable.no-footer {
-			border-bottom: 1px solid lightgray;
-		}
-
-		.active {
-			text-align: center;
-			background-color: #bae7d4d1;
-			color: #3FC28A;
-			font-size: 12px;
-			border-radius: 4px;
-			padding: 2px 8px;
-			width: fit-content;
-		}
-
-
-
-		.inactive {
-			font-size: 12px;
-			color: #8B0D35;
-			background-color: #ffc9da93;
-			text-align: center;
-			border-radius: 4px;
-			padding: 2px 8px;
-			width: fit-content;
-		}
-
-		.new-user {
-			padding: 2px 8px;
-			width: fit-content;
-			text-align: center;
-			background-color: #cbc3ef;
-			font-size: 12px;
-			border-radius: 4px;
-		}
-
-		/* model box */
-		/* The Modal (background) */
-		.modal {
-			display: none;
-			/* Hidden by default */
-			position: fixed;
-			/* Stay in place */
-			z-index: 1;
-			/* Sit on top */
-			padding-top: 100px;
-			/* Location of the box */
-			left: 0;
-			top: 0;
-			width: 100%;
-			/* Full width */
-			height: 100%;
-			/* Full height */
-			overflow: auto;
-			/* Enable scroll if needed */
-			background-color: rgb(0, 0, 0);
-			/* Fallback color */
-			background-color: rgba(0, 0, 0, 0.4);
-			/* Black w/ opacity */
-		}
-
-		/* Modal Content */
-		.modal-content {
-			background-color: #fefefe;
-			margin-left: 40%;
-			margin-top: 10%;
-			padding: 20px;
-			border: 1px solid #888;
-			width: 30%;
-		}
-
-		/* The Close Button */
-
-
-		.close:hover,
-		.close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-
-		.search-employe {
-			display: flex;
-			width: 100%;
-			border: 1px solid lightgray;
-			border-radius: 5px;
-			height: 50px;
-		}
-
-		.search-employe img {
-			margin-left: 10px;
-			margin-top: 10px;
-			height: 24px;
-			width: 24px;
-			text-align: center;
-
-
-		}
-
-		.search-employe input {
-			border: none;
-			overflow: hidden;
-			outline: none;
-			width: 100%;
-			height: 100%;
-		}
-
-		.select-type {
-			padding-top: 13px;
-			font-size: 16px;
-			font-weight: 600;
-			color: #16151C;
-		}
-
-		.form-check-input:checked {
-			color: black;
-			background-color: #000;
-			border-color: #000;
-			outline: none;
-		}
-
-		.aply-cancle button {
-			font-size: 16px;
-			margin-top: 10px;
-		}
-
-		button#Apply {
-			background-color: #232F4B;
-			color: #fff;
-			padding: 10px 30px;
-			border: none;
-			border-radius: 10px;
-		}
-
-		button#cencle {
-			background-color: transparent;
-			border: 1px solid #A2A1A8;
-			padding: 10px 30px;
-			color: black;
-			border-radius: 10px;
-		}
-
-		button#cencle:hover {
-			background-color: #232F4B;
-			color: #fff;
-		}
-
-		.search-table {
-			display: flex;
-			width: 300px;
-			border: 1px solid lightgray;
-			border-radius: 5px;
-			height: 50px;
-		}
-
-		.search-table input {
-			border: none;
-			overflow: hidden !important;
-			outline: none !important;
-			width: 100%;
-			height: 100%;
-			background-color: transparent;
-		}
-
-		.search-table img {
-			margin-left: 10px;
-			margin-top: 10px;
-			height: 24px;
-			width: 24px;
-			text-align: center;
-		}
-
-		#user {
-			background-color: #8B0D35;
-		}
-
-		.this-all {
-			display: flex;
-			text-align: center;
-			align-items: center;
-
-		}
-
-		.this-all img {
-			padding-right: 8px;
-		}
+	
 	</style>
 
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
-			<div class="container-fluid nav-baar">
+			<div class="container-fluid nav-baar px-0">
 				<div>
-					<p class="navbar-brand">Todays Statistics</p>
+					<p class="navbar-brand">Bookings</p>
 					<p class="date">Tue, 14 Nov, 2024, 11.30 AM </p>
 				</div>
 
 
-				<div class="search">
-					<i class="bi bi-bell"></i>
+				<div class="search_box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" 
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7c0-2.42-1.72-4.44-4.005-4.901"/></svg>
 
 					<div class="input-search">
-						<input class="form-control" type="search" aria-label="Search" placeholder="  Search">
-						<i class="bi bi-search"></i>
-
+						<input class="form_input" type="text" placeholder="Search here">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.0001 21L16.5141 16.506L21.0001 21ZM19.0001 10.5C19.0001 12.7543 18.1046 14.9163 16.5105 16.5104C14.9165 18.1045 12.7545 19 10.5001 19C8.24578 19 6.08377 18.1045 4.48971 16.5104C2.89566 14.9163 2.00012 12.7543 2.00012 10.5C2.00012 8.24566 2.89566 6.08365 4.48971 4.48959C6.08377 2.89553 8.24578 2 10.5001 2C12.7545 2 14.9165 2.89553 16.5105 4.48959C18.1046 6.08365 19.0001 8.24566 19.0001 10.5V10.5Z" stroke="#656575" stroke-width="1.80206" stroke-linecap="round"/>
+                        </svg>
 					</div>
-
 				</div>
 			</div>
 		</nav>
 	</header>
-
 	<div class="main-data">
 		<table class="display" id="example" style="width:100%">
 
@@ -481,7 +140,7 @@
 
 
 						<div class="d-flex aply-cancle" style="justify-content: end; gap:10px;">
-							<button class="close" id="cencle">Cencle</button>
+							<button class="close" id="cencle">Cencel</button>
 							<button class="close1" id="Apply">Apply</button>
 						</div>
 					</div>
