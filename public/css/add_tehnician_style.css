@@ -2,10 +2,13 @@
     background-color: #8b0d35;
 }
 .main-data {
-    margin-top: 30px;
-    border: 1px solid #c2c2c2;
+    position: relative;
+    clear: both;
+    width: 100%;
+    border: 1px solid rgba(162, 161, 168, 0.2);
     border-radius: 10px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 .Personal-Information {
     background-color: none;
@@ -167,3 +170,7 @@ input.form-control:focus {
     line-height: 0;
     font-size: 14px;
 }
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: .2em .5em !important;
+    border-radius: 5px !important;
+}    

@@ -11,7 +11,7 @@
 	</style>
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
-			<div class="container-fluid nav-baar">
+			<div class="container-fluid nav-baar px-0">
 				<div>
 					<p class="navbar-brand">Add New Technician</p>
 					<p class="date">Tue, 14 Nov, 2024, 11.30 AM </p>

@@ -88,7 +88,6 @@
 			position: relative;
 			clear: both;
 			width: 100%;
-			margin-top: 30px;
 			border: 1px solid rgba(162, 161, 168, 0.2);
 			border-radius: 10px;
 			padding: 20px;
@@ -254,7 +253,7 @@
 			display: flex;
 			width: 100%;
 			border: 1px solid lightgray;
-			border-radius: 5px;
+			border-radius: 10px;
 			height: 50px;
 		}
 
@@ -272,7 +271,8 @@
 			overflow: hidden;
 			outline: none;
 			width: 100%;
-			height: 100%;
+			padding: 10px;
+    		border-radius: 50%;
 		}
 
 		.select-type {
@@ -383,6 +383,10 @@
 		.dataTables_wrapper .dataTables_info {
 			color: #A2A1A8;
 		}
+		.dataTables_wrapper .dataTables_paginate .paginate_button {
+			padding: .2em .5em !important;
+			border-radius: 5px !important;
+		}    
 	</style>
 
 	<header class="content">

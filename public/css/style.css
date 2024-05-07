@@ -89,3 +89,11 @@ input .form_input {
     align-items: center;
     gap: 20px;
 }
+
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: .2em .5em !important;
+    border-radius: 5px !important;
+}    

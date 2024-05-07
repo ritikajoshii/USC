@@ -10,6 +10,10 @@
 		.fade:not(.show) {
 			display: none;
 		}
+		
+		tbody, td, tfoot, th, thead, tr {
+			padding: 10px;
+		}
 	</style>
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
@@ -346,7 +350,7 @@
 				{{-- ----------------------- Services------------ --}}
 				<div class="tab-pane fade" id="main-pills-profile1" role="tabpanel" aria-labelledby="main-pills-profile-tab"
 					tabindex="0">
-					<table class="box-table table">
+					<table class="box-table table" >
 						<thead>
 							<tr>
 								<th scope="col">Sr. No.</th>

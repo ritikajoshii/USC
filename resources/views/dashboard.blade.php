@@ -9,7 +9,7 @@
 		/* *******************Dashboard Page***************************** */
 		.main-dv {
 			display: flex;
-			margin-top: 50px;
+			/* margin-top: 50px; */
 			/* background-color: rgb(219 202 202 / 20%); */
 		}
 
@@ -18,13 +18,16 @@
 			color: #fff;
 		}
 
+		.price_sec {
+			color: rgba(101, 101, 117, 1) !important;
+		}
 
 		.first-dv {
 			display: flex;
 			justify-content: space-between;
 			padding: 0px 30px;
 			border-radius: 10px;
-			background-color: lightblue;
+			background-color: rgba(6, 139, 146, 0.2);
 			height: 102px;
 
 		}
@@ -42,25 +45,37 @@
 			margin-top: 23px;
 			width: 47px;
 			height: 47px;
-			border-radius: 50%;
-			background-color: #079AA2;
+			border-radius: 20%;
+			background-color: rgba(7, 154, 162, 0.5);
 			align-content: stretch;
 			justify-content: space-around;
 		}
 
 		.first-dv .user {
-			margin-top: 0px;
+			color: rgba(6, 139, 146, 1);
+		}
 
-			color: #068B92;
+		.tech_text {
+			color: rgba(217, 95, 24, 1);
+		}
+
+		.book_text {
+			color: rgba(173, 45, 30, 1);
+		}
+
+		.first-dv .user,
+		.tech_text,
+		.book_text {
+			margin-top: 0px;
 			font-size: 13px;
-			text-align: right;
 		}
 
 		.first-dv .total {
-			font-size: 20px;
-			padding-top: 35px;
+			font-size: 28px;
+			font-weight: 500;
+			padding-top: 15px;
+			margin-bottom: 0px;
 			color: #232D42;
-
 		}
 
 		.second-dv {
@@ -69,7 +84,7 @@
 			justify-content: space-between;
 			padding: 0px 30px;
 			border-radius: 10px;
-			background-color: #e8ad8a;
+			background-color: rgba(217, 95, 24, 0.2);
 			height: 102px;
 		}
 
@@ -80,15 +95,17 @@
 			margin-top: 23px;
 			width: 47px;
 			height: 47px;
-			border-radius: 50%;
-			background-color: #f5823e;
+			border-radius: 20%;
+			background-color: rgba(241, 106, 27, 0.5);
 			align-content: stretch;
 			justify-content: space-around;
 		}
 
 		.second-dv .total2 {
-			font-size: 20px;
-			padding-top: 35px;
+			font-size: 28px;
+			font-weight: 500;
+			padding-top: 15px;
+			margin-bottom: 0px;
 			color: #232D42;
 
 		}
@@ -105,9 +122,13 @@
 			justify-content: space-between;
 			padding: 0px 30px;
 			border-radius: 10px;
-			background-color: #f2a49b;
+			background-color: rgba(173, 45, 30, 0.2);
 			height: 102px;
 
+		}
+
+		.content-sec {
+			text-align: end;
 		}
 
 
@@ -118,16 +139,17 @@
 			margin-top: 23px;
 			width: 47px;
 			height: 47px;
-			border-radius: 50%;
-			background-color: #dd7d72;
-
+			border-radius: 20%;
+			background-color: rgba(192, 50, 33, 0.5);
 			align-content: stretch;
 			justify-content: space-around;
 		}
 
 		.last-dv .total3 {
-			font-size: 20px;
-			padding-top: 35px;
+			font-size: 28px;
+			font-weight: 500;
+			padding-top: 15px;
+			margin-bottom: 0px;
 			color: #232D42;
 
 		}
@@ -136,6 +158,11 @@
 			text-align: center;
 			content: "\f4da";
 			color: #D95F18;
+		}
+		.service_text {
+			background-color: rgba(153, 153, 153, 0.1);
+			padding: 4px 12px;
+			border-radius: 4px;
 		}
 
 		/* **********************Second-section************************* */
@@ -193,7 +220,7 @@
 			margin-left: 20px;
 			margin-top: 30px;
 			background-color: #ffff;
-
+			box-shadow: 0 8px 24px 0 rgba(69, 69, 80, 0.1);
 		}
 
 		.details {
@@ -220,7 +247,8 @@
 			height: 16px;
 			border-radius: 50%;
 			background-color: #52C93F;
-			border: none;
+			outline: 1px solid rgba(82, 201, 63, 1);
+    		border: 1px solid #ffffff;
 			margin-right: 5px;
 		}
 
@@ -240,7 +268,8 @@
 			height: 16px;
 			border-radius: 50%;
 			background-color: #006AFF;
-			border: none;
+			outline: 1px solid #006AFF;
+    		border: 1px solid #ffffff;
 			margin-right: 5px;
 		}
 
@@ -249,7 +278,8 @@
 			height: 16px;
 			border-radius: 50%;
 			background-color: #FF2727;
-			border: none;
+			outline: 1px solid #FF2727;
+    		border: 1px solid #ffffff;
 			margin-right: 5px;
 		}
 
@@ -268,7 +298,6 @@
 		}
 
 		td.name {
-			display: flex;
 			color: #1A1919;
 			font-size: 16px;
 		}
@@ -296,9 +325,9 @@
 	</style>
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
-			<div class="container-fluid nav-baar">
+			<div class="container-fluid nav-baar px-0">
 				<div>
-					<p class="navbar-brand"> Technician</p>
+					<p class="navbar-brand">Todays Statistics</p>
 					<p class="date">Tue, 14 Nov, 2024, 11.30 AM </p>
 				</div>
 
@@ -327,7 +356,15 @@
 				<div class="col-lg-3 col-md-3 first-sec">
 					<div class="first-dv">
 						<div class="img-sec">
-							<div class="user-icon1"><i class="bi bi-person-fill"></i></div>
+							<div class="user-icon1"><svg width="22" height="27" viewBox="0 0 22 27" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M11.4886 17.8633C6.0224 17.8633 0.9646 20.4617 0.9646 23.7347C0.9646 27.0077 5.99211 26.463 11.488 26.463C16.9542 26.463 21.6216 27.0064 21.6216 23.7347C21.6216 20.4631 16.9845 17.8633 11.4886 17.8633Z"
+										fill="#068B92" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M11.4887 13.1953C15.0758 13.1953 17.9833 10.319 17.9833 6.7718C17.9833 3.22462 15.0758 0.349609 11.4887 0.349609C7.90149 0.349609 4.99271 3.22462 4.99271 6.7718C4.9806 10.307 7.86919 13.1833 11.4429 13.1953H11.4887Z"
+										fill="#068B92" />
+								</svg></div>
 						</div>
 						<div class="content-sec">
 							<p class="total">6600</p>
@@ -337,29 +374,42 @@
 					</div>
 					<div class="second-dv">
 						<div class="img-sec1">
-							<div class="user-icon2"><i class="bi bi-person-fill2"></i></div>
+							<div class="user-icon2"><svg width="22" height="27" viewBox="0 0 22 27" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M11.4886 18.3445C6.0224 18.3445 0.9646 20.9429 0.9646 24.2159C0.9646 27.4889 5.99211 26.9442 11.488 26.9442C16.9542 26.9442 21.6216 27.4876 21.6216 24.2159C21.6216 20.9443 16.9845 18.3445 11.4886 18.3445Z"
+										fill="#D95F18" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M11.4887 13.6763C15.0758 13.6763 17.9833 10.7999 17.9833 7.25275C17.9833 3.70558 15.0758 0.830566 11.4887 0.830566C7.90149 0.830566 4.99271 3.70558 4.99271 7.25275C4.9806 10.7879 7.86919 13.6643 11.4429 13.6763H11.4887Z"
+										fill="#D95F18" />
+								</svg></div>
 						</div>
 						<div class="content-sec">
-							<p class="total2">6600</p>
-							<p class="user">User</p>
+							<p class="total2">560</p>
+							<p class="tech_text">Technician</p>
 						</div>
 
 
 					</div>
 					<div class="last-dv">
 						<div class="img-sec2">
-							<div class="user-icon3"><img src="{{ asset('assets/Images/Vector.svg') }}"></div>
+							<div class="user-icon3"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M6.24999 23.75V10.125L4.05249 5.29376L5.19749 4.76001L7.60624 10.0625H22.3937L24.8025 4.76001L25.9475 5.29376L23.75 10.125V23.75H6.24999ZM12.5 15.625H17.5C17.6775 15.625 17.8258 15.565 17.945 15.445C18.065 15.325 18.125 15.1763 18.125 14.9988C18.125 14.8213 18.065 14.6729 17.945 14.5538C17.8258 14.4346 17.6775 14.375 17.5 14.375H12.5C12.3225 14.375 12.1742 14.435 12.055 14.555C11.935 14.675 11.875 14.8238 11.875 15.0013C11.875 15.1788 11.935 15.3271 12.055 15.4463C12.175 15.5654 12.3233 15.625 12.5 15.625ZM7.49999 22.5H22.5V11.3125H7.49999V22.5Z"
+										fill="#A11E0F" />
+								</svg></div>
 						</div>
 						<div class="content-sec">
-							<p class="total3">6600</p>
-							<p class="user">User</p>
+							<p class="total3">3500</p>
+							<p class="book_text">Booking</p>
 						</div>
 
 
 					</div>
 				</div>
 				{{-- ----------------------------Second-Section---------------------------------------- --}}
-				<div class="col-lg-9 col-md-9 second-sec" style="padding-right:12px;">
+				<div class="col-lg-9 col-md-9 second-sec">
 					<div class="container text-start">
 						<div class="row align-items-start">
 							<div class="col-lg-4 col-md-4">
@@ -414,7 +464,7 @@
 						<table class="table">
 							<div class="d-flex justify-content-between">
 								<p style="color: #1A1919; font-weight:600;">Technician</p>
-								<button class="filtter-btn"><img src="{{ asset('assets/Images/Filter.svg') }}">Filtter</button>
+								<button class="filtter-btn"><img src="{{ asset('assets/Images/Filter.svg') }}">Filter</button>
 							</div>
 							<thead>
 								<tr>
@@ -424,33 +474,31 @@
 									<th scope="col">Status</th>
 									<th scope="col">Earning</th>
 									<th></th>
-
-
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<th scope="row">01</th>
-									<td class="number">6465</td>
+									<td class="number"><span class="service_text">6465</span></td>
 									<td class="name"><img src="{{ asset('assets/Images/Ellipse 7.svg') }}">Noman</td>
 									<td class="complete"><button class="active_btn"></button>Completed</td>
-									<td>QAR 35.44</td>
+									<td class="price_sec">QAR 35.44</td>
 									<td><button class="details">Details</button></td>
 								</tr>
 								<tr>
 									<th scope="row">01</th>
-									<td class="number">6465</td>
+									<td class="number"><span class="service_text">1365</span></td>
 									<td class="name"><img src="{{ asset('assets/Images/Ellipse 7 (1).svg') }}">Noman</td>
-									<td class="complete"><button class="panding_btn"></button>Completed</td>
-									<td>QAR 35.44</td>
+									<td class="complete"><button class="panding_btn"></button>Pending</td>
+									<td class="price_sec">QAR 35.44</td>
 									<td><button class="details">Details</button></td>
 								</tr>
 								<tr>
 									<th scope="row">01</th>
-									<td class="number">6465</td>
+									<td class="number"><span class="service_text">8045</span></td>
 									<td class="name"><img src="{{ asset('assets/Images/Ellipse 7 (2).svg') }}">Noman</td>
-									<td class="complete"><button class="route_btn"></button>Completed</td>
-									<td>QAR 35.44</td>
+									<td class="complete"><button class="route_btn"></button>In route</td>
+									<td class="price_sec">QAR 35.44</td>
 									<td><button class="details">Details</button></td>
 								</tr>
 							</tbody>

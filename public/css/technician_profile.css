@@ -5,11 +5,11 @@
     fill:#ffffff;
     border: red;
 }
-.main-section {
-    border: 1px solid lightgray;
+.main-section { 
     margin-top: 30px;
     border-radius: 10px;
     padding: 20px;
+    border: 1px solid rgba(162, 161, 168, 0.2);
 }
 .top-section {
     border-bottom: 1px solid lightgray;
@@ -63,7 +63,7 @@
     height: 224px;
     margin-top: 20px;
     padding: 0px 0px;
-    border: 1px solid #a2a1a8;
+    border: 1px solid rgba(162, 161, 168, 0.2);
     border-radius: 10px;
 }
 .nav-pills1 .nav-link1.active,
@@ -197,9 +197,10 @@
 }
 
 table {
-    background-color: #a2a1a8 !important;
+    background-color: #f7f4f4 !important;
     margin-top: 20px;
     padding: 2px 6px;
+    width: 100%;
 }
 table .Completed {
     color: #3fc28a;
@@ -251,3 +252,11 @@ table .process {
 .box-table tr th {
     background-color: #f7f4f4;
 }
+.box-table tr th {
+    color: #A2A1A8;
+    font-weight: 400;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: .2em .5em !important;
+    border-radius: 5px !important;
+}    

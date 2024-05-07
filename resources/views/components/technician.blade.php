@@ -11,13 +11,11 @@
 
 		.main-data {
 			position: relative;
-			/* clear: both; */
-			/* width: 100%; */
-
-			margin-top: 30px;
-			border: 1px solid #A2A1A8;
+			clear: both;
+			width: 100%;
+			border: 1px solid rgba(162, 161, 168, 0.2);
 			border-radius: 10px;
-			padding: 10px;
+			padding: 20px;
 		}
 
 		div#example_filter {
@@ -53,11 +51,9 @@
 		}
 
 		.button-top {
-			padding: 30px;
-			/* padding-right: 30px; */
+			padding: 0px 0px 30px 0px;
 			justify-content: space-between;
 			display: flex;
-			/* justify-content: space-evenly; */
 		}
 
 		.button-top .add-Technician {
@@ -67,8 +63,8 @@
 			margin-right: 50px;
 			background-color: #232F4B;
 			color: #ffff;
-			padding: 10px 30px;
-			border-radius: 10px;
+			padding: 12px 20px;	
+			border-radius: 15px;
 		}
 
 		.button-top .add-Technician img {
@@ -78,7 +74,8 @@
 		.filtter-butn {
 			align-items: center;
 			display: flex;
-			border: 1px solid #A2A1A8;
+			background: transparent;
+			border: 1px solid rgba(162, 161, 168, 0.2);
 			border-radius: 10px;
 			padding: 0px 22px;
 		}
@@ -247,8 +244,11 @@
 			display: flex;
 			width: 300px;
 			border: 1px solid lightgray;
-			border-radius: 5px;
-			height: 50px;
+			border-radius: 10px;
+			/* height: 50px; */
+		}
+		.search-table input::placeholder {
+			color: rgba(22, 21, 28, 0.2);
 		}
 
 		.search-table input {
@@ -284,9 +284,9 @@
 
 	<header class="content">
 		<nav class="navbar tertiary d-flex">
-			<div class="container-fluid nav-baar">
+			<div class="container-fluid nav-baar px-0">
 				<div>
-					<p class="navbar-brand">Todays Statistics</p>
+					<p class="navbar-brand">Technician</p>	
 					<p class="date">Tue, 14 Nov, 2024, 11.30 AM </p>
 				</div>
 
@@ -336,15 +336,11 @@
 				</tr>
 			</thead>
 			<tbody class="list" id="tableBody">
-
 				<tr>
-
-
 					<td class="d-flex this-all"><a href="{{ route('technician_profile') }}"
 							style="cursor: pointer; text-decoration:none; color:black;"><img
 								src="{{ asset('assets/Images/Ellipse 1192.svg') }}">Tech
 							Ali</a></td>
-
 					<td>345321231</td>
 					<td>this@gmail.com</td>
 					<td>Doha</td>

@@ -14,7 +14,7 @@
 		<nav class="navbar tertiary d-flex">
 			<div class="container-fluid nav-baar px-0">
 				<div>
-					<p class="navbar-brand">Bookings</p>
+					<p class="navbar-brand">User</p>
 					<p class="date">Tue, 14 Nov, 2024, 11.30 AM </p>
 				</div>
 
