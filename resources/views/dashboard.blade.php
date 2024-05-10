@@ -1,5 +1,6 @@
 <x-app-layout>
 	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<style>
 		body {
 			background-color: rgb(219 202 202 / 20%);
@@ -159,6 +160,7 @@
 			content: "\f4da";
 			color: #D95F18;
 		}
+
 		.service_text {
 			background-color: rgba(153, 153, 153, 0.1);
 			padding: 4px 12px;
@@ -248,7 +250,7 @@
 			border-radius: 50%;
 			background-color: #52C93F;
 			outline: 1px solid rgba(82, 201, 63, 1);
-    		border: 1px solid #ffffff;
+			border: 1px solid #ffffff;
 			margin-right: 5px;
 		}
 
@@ -269,7 +271,7 @@
 			border-radius: 50%;
 			background-color: #006AFF;
 			outline: 1px solid #006AFF;
-    		border: 1px solid #ffffff;
+			border: 1px solid #ffffff;
 			margin-right: 5px;
 		}
 
@@ -279,7 +281,7 @@
 			border-radius: 50%;
 			background-color: #FF2727;
 			outline: 1px solid #FF2727;
-    		border: 1px solid #ffffff;
+			border: 1px solid #ffffff;
 			margin-right: 5px;
 		}
 
@@ -321,6 +323,40 @@
 			font-size: 10px;
 			border-radius: 10px;
 			color: #656575;
+		}
+
+
+
+		.container {
+			margin-top: 30px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			background-color: white;
+		}
+
+		.graph-container {
+			display: flex;
+			flex: 1;
+			width: 70%
+		}
+
+		.summary-container {
+
+
+			/* Set width for the summary container */
+		}
+
+		.summary-container h3 {
+			font-size: 16px;
+			font-weight: 600;
+			padding: 10px;
+		}
+
+		.summary-container p {
+			color: #525256;
+			font-size: 14px;
+			padding: 0px 10px;
 		}
 	</style>
 	<header class="content">
@@ -504,14 +540,77 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="graph-dv">
+					<div class="container">
+						<div class="graph-container">
+
+							<div class="summary-container">
+								<h3>Earning Summary</h3>
+								<p>QAR 300k</p>
+								<p>QAR 300k</p>
+								<p>QAR 300k</p>
+								<p>QAR 300k</p>
+							</div>
+							<div id="chart" style="height: 200px; width:800px;"></div>
+						</div>
 
 					</div>
+
 				</div>
 			</div>
 
 		</div>
 	</div>
 	</div>
+	<script>
+		// Sample data for the area graph
+		const areaData = [{
+				x: 'May',
+				y: 100.0
+			},
+			{
+				x: 'June',
+				y: 200.0
+			},
+			{
+				x: 'Jul',
+				y: 300.0
+			},
+			{
+				x: 'Aug',
+				y: 200.0
+			},
+			{
+				x: 'Sep',
+				y: 250.0
+			},
+			{
+				x: 'Oct',
+				y: 200.0
+			} // New month
+		];
 
+		// Options for the area graph
+		const areaOptions = {
+			chart: {
+				type: 'area',
+				height: 250, // Adjust this value to change the height of the chart
+
+			},
+			series: [{
+				name: 'Area Graph',
+				data: areaData
+			}],
+			xaxis: {
+				type: 'category',
+				categories: areaData.map(dataPoint => dataPoint.x)
+			}
+		};
+
+
+		// Initialize the chart
+		const areaChart = new ApexCharts(document.querySelector("#chart"), areaOptions);
+
+		// Render the chart
+		areaChart.render();
+	</script>
 </x-app-layout>
